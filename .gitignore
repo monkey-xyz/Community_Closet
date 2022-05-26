@@ -34,7 +34,7 @@ bower_components
 # node-waf configuration
 .lock-wscript
 
-#Add .ds_store
+# Add .ds_store
 .DS_Store
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
