@@ -2,7 +2,7 @@
 <section>
   <h2>Your Posts</h2>
     {{#each posts as |post|}}
-      {{> dashboard-post-info post}}
+      {{> profile-postinfo post}}
     {{/each}}
 
 </section>
@@ -10,5 +10,4 @@
 
 <button type="submit" class="btn"><a class="link" href="/profile/new">Create A New Post!</a></button>
 
-{{!-- add add-post.js --}}
 <script src="/javascript/add-post.js"></script>
