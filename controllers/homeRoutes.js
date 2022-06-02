@@ -11,7 +11,8 @@ router.get('/', Auth, async (req, res) => {
         const dashPosts = postData.map((posts) =>
             posts.get()
         );
-        res.render('dashboard', {
+
+        res.render('profile', {
             //,
         });
     } catch (err) {
@@ -25,7 +26,7 @@ router.get('/post/:id', async (req, res) => {
 
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
-        res.redirect('/dashboard');
+        res.redirect('/profile');
         return;
     }
 
