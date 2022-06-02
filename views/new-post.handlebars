@@ -1,0 +1,31 @@
+<div class="card">
+    <h3 class="card-header">Add a new listing</h3>
+
+    <form class="card-body new-post-form" id="new-post-form">
+        <label for="post-title" class="form-label">Title</label>
+        <input type="text" id="post-title" name="post-title" class="form-input" />
+
+
+        <label class="form-label" for="content">Description</label>
+        <input id="content" name="content" class="form-input" />
+
+        <label class="form-label" for="content">Location</label>
+        <input id="content" name="content" class="form-input" />
+
+        <label class="form-label" for="content">Size</label>
+        <input id="content" name="content" class="form-input" />
+
+        {{!-- <p>Upload a Photo</p>
+        <form action="/action_page.php">
+            <input type="file" id="myFile" name="filename">
+            <input type="submit">
+        </form> --}}
+
+
+
+        <button type="submit" class="btn">Create Post</button>
+    </form>
+</div>
+
+{{!-- add add-post.js --}}
+<script src="/javascript/add-post.js"></script>
