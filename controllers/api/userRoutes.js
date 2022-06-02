@@ -1,4 +1,12 @@
 const router = require('express').Router();
-// const { When Model Is Done, Replace & Remove Comment} = require ('')
+const { User } = require('../../models')
 
-// module.exports = ;
+router.post('/', async (req, res) => {
+    try {
+        const userData = await User.create(req.body);
+    } catch (err) {
+        res.status(404).json(userData);
+    }
+});
+
+module.exports = router;
