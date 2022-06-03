@@ -11,9 +11,16 @@ Picture.init(
             primaryKey: true,
             autoIncrement: true,
           },
-        image: {
-            type: DataTypes.BLOB,
+        url: {
+            type: DataTypes.sting,
             allowNull: true,
+        },
+        post_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'post',
+                key: 'id',
+            },
         },
     },
     {
