@@ -6,7 +6,7 @@ router.get("/", async (req, res) => {
   const TEST = "test";
 });
 
-//add routes for s3
+//routes for s3
 
 //open in browser to see upload form
 app.get("/", function (req, res) {
