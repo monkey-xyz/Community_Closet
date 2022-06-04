@@ -1,4 +1,4 @@
-import { generateUploadURL } from "./s3.js";
+const { generateUploadURL } = require("./s3.js");
 
 const path = require("path");
 const express = require("express");
