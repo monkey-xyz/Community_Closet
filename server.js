@@ -70,26 +70,6 @@ var upload = multer({
   }),
 });
 
-//open in browser to see upload form
-app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/index.html"); //index.html is inside node-cheat
-});
-
-//use by upload form
-app.post("/upload", upload.array("upl", 25), function (req, res, next) {
-  res.send({
-    message: "Uploaded!",
-    urls: req.files.map(function (file) {
-      return {
-        url: file.location,
-        name: file.key,
-        type: file.mimetype,
-        size: file.size,
-      };
-    }),
-  });
-});
-
 app.listen(3000, function () {
   console.log("Example app listening on port 3000!");
 });
