@@ -52,6 +52,20 @@ router.put('/:id', async (req, res) => {
     }
 });
 
+app.post("/upload", upload.array("upl", 25), function (req, res, next) {
+  res.send({
+    message: "Uploaded!",
+    urls: req.files.map(function (file) {
+      return {
+        url: file.location,
+        name: file.key,
+        type: file.mimetype,
+        size: file.size,
+      };
+    }),
+  });
+});
+
 
 router.post('/', )
 module.exports = router;
