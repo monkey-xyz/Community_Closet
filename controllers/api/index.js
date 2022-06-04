@@ -8,7 +8,7 @@ const pictureRoutes = require('./pictureRoutes');
 
 router.use('/posts', postRoutes);
 router.use('/users', userRoutes);
-router.use('/comments', userRoutes);
-router.use('/pictures', userRoutes);
+router.use('/comments', commentRoutes);
+router.use('/pictures', pictureRoutes);
 
 module.exports = router;

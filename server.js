@@ -1,3 +1,5 @@
+const { generateUploadURL } = "./s3.js";
+
 const path = require("path");
 const express = require("express");
 const session = require("express-session");
@@ -39,15 +41,9 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(routes);
 
-//
-app.post("/images", upload.single("avatar"), (req, res) => {
-  res.send("Resolved successfully!");
-});
-
-app.get("/s3Url", async (req, res) => {
-  const url = await generateUploadURL();
-  res.send({ url });
-});
+app.get ("/", (req,res) => {
+  res.render('homepage')
+})
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));

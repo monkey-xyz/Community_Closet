@@ -10,10 +10,26 @@ router.get('/', async (req, res) => {
                     model: User,
                     attributes: ['name'],
                 },
-                // include model: Pictures when that is created, eventually. attributes = blob info maybe?
             ],
         });
-        res.status(200).json(ProductData);
+        res.status(200).json(postData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+
+router.get('/:id', async (req, res) => {
+    try {
+        const postData = await Post.findByPk(req.params.id, {
+            include: [
+                {
+                    model: User,
+                    attributes: ['name'],
+                },
+            ],
+        });
+        res.status(200).json(postData);
     } catch (err) {
         res.status(500).json(err);
     }
@@ -22,6 +38,20 @@ router.get('/', async (req, res) => {
 // Create Delete route to get rid of posts?
 
 // Create a Put route to update existing posts?
+
+router.put('/:id', async (req, res) => {
+    try {
+        const postData = await Post.findAll({
+            where: {
+                id: req.params.ids,
+            },
+        });
+        res.status(200).json(postData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 
 router.post('/', )
 module.exports = router;
