@@ -11,11 +11,7 @@ Post.init(
             primaryKey: true,
             autoIncrement: true,
         },
-<<<<<<< HEAD
         title: {
-=======
-        name: {
->>>>>>> 9d9c8f1 (updating models)
             type: DataTypes.STRING,
             allowNull: false,
         },
