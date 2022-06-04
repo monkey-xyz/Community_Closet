@@ -1,5 +1,3 @@
-const { generateUploadURL } = require("./s3.js");
-
 const path = require("path");
 const express = require("express");
 const session = require("express-session");
