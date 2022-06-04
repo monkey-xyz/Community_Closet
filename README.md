@@ -38,8 +38,6 @@ This is an MVC application built with [MySQL2](https://www.npmjs.com/package/mys
 ![Initializing the application](/assets/images/********.png)
 
 
-
-
 ---
 ## Tests
 
