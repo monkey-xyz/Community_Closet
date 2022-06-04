@@ -8,6 +8,7 @@ router.get("/", async (req, res) => {
 
 //routes for s3
 
+//put this into the post handlebars
 //open in browser to see upload form
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/index.html"); //index.html is inside node-cheat
