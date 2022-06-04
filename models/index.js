@@ -26,5 +26,3 @@ User.hasMany(Post, {
   });
 
 module.exports = { User, Post, Comment, Picture };
-
-module.exports = { User, Post, Comment };
