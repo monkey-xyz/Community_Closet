@@ -12,7 +12,7 @@ Picture.init(
             autoIncrement: true,
           },
         url: {
-            type: DataTypes.sting,
+            type: DataTypes.STRING,
             allowNull: true,
         },
         post_id: {
