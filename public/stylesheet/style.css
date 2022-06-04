@@ -1,0 +1,16 @@
+:root {
+    --dark-color : blue
+    
+}
+
+* {
+    text-align: center;
+}
+#headermain {
+    background-color: rgb(102, 174, 233);
+}
+
+.btn {
+    background-color: rgb(0, 0, 0);
+    color:rgb(58, 248, 248)
+}
