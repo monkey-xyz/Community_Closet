@@ -4,10 +4,10 @@ const Comment = require('./Comment');
 const Picture = require('./Picture');
 
 User.hasMany(Post, {
-    foreignKey: 'user_id',
-    onDelete: 'CASCADE'
-  });
-  
+  foreignKey: "user_id",
+  onDelete: "CASCADE",
+});
+
   Post.belongsTo(User, {
     foreignKey: 'user_id'
   });
@@ -26,4 +26,3 @@ User.hasMany(Post, {
   });
 
 module.exports = { User, Post, Comment, Picture };
-
