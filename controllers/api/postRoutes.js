@@ -38,20 +38,32 @@ router.get("/:id", async (req, res) => {
 
 // Create a Put route to update existing posts?
 
-router.put("/:id", async (req, res) => {
-  try {
-    const postData = await Post.findAll({
-      where: {
-        id: req.params.ids,
-      },
-    });
-    res.status(200).json(postData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
+router.put('/:id', async (req, res) => {
+    try {
+        const postData = await Post.findAll({
+            where: {
+                id: req.params.ids,
+            },
+        });
+        res.status(200).json(postData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
 });
 
-// app.post("/upload", upload.array("upl", 25), function (req, res, next) {
+router.post('/', async (req, res) => {
+    try {
+        const postData = await Post.create({
+            ...req.body,
+            user_id: req.session.user_id,
+        });
+        res.status(200).json(postData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
+// router.post("/upload", upload.array("upl", 25), function (req, res, next) {
 //   res.send({
 //     message: "Uploaded!",
 //     urls: req.files.map(function (file) {
@@ -64,6 +76,7 @@ router.put("/:id", async (req, res) => {
 //     }),
 //   });
 // });
+
 
 router.post("/");
 module.exports = router;
