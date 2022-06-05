@@ -28,7 +28,7 @@ router.get("/", async (req, res) => {
 
 router.post("/login", async (req, res) => {
     try {
-        const userData = await User.create({
+        const userData = await User.findOne({
             where: {
                 email: req.body.email
             }
@@ -41,6 +41,7 @@ router.post("/login", async (req, res) => {
             return;
         }
 
+        const passwordCheck = await userData.checkPassword(req.body.password);
     } catch (err) {
         res.status(404).json(userData);
     }

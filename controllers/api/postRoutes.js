@@ -61,7 +61,7 @@ router.post('/', async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
-})
+});
 
 // router.post("/upload", upload.array("upl", 25), function (req, res, next) {
 //   res.send({
