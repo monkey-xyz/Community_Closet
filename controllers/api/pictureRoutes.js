@@ -22,7 +22,16 @@ const Auth = require('../../utils/auth');
 
 router.get('/', async (req, res) => {
     try {
-        const pictureData = await Picture.findAll;
+        const pictureData = await Picture.findAll();
+        res.status(200).json(pictureData);
+    } catch (err) {
+        res.status(404).json(pictureData);
+    }
+});
+
+router.get('/', async (req, res) => {
+    try {
+        const pictureData = await Picture.findByPk();
         res.status(200).json(pictureData);
     } catch (err) {
         res.status(404).json(pictureData);
