@@ -1,0 +1,57 @@
+<div class="card">
+    <h3 class="card-header">Add a new listing</h3>
+
+    <form class="card-body new-post-form" id="new-post-form">
+        <label for="post-title" class="form-label">Title</label>
+        <input type="text" id="post-title" name="post-title" class="form-input" />
+
+
+        <label class="form-label" for="content">Description</label>
+        <input id="content" name="content" class="form-input" />
+
+        <label class="form-label" for="content">Location</label>
+        <input id="content" name="content" class="form-input" />
+
+        <label class="form-label" for="content">Size</label>
+        <input id="content" name="content" class="form-input" />
+
+        {{!-- <p>Upload a Photo</p>
+        <form action="/action_page.php">
+            <input type="file" id="myFile" name="filename">
+            <input type="submit">
+        </form> --}}
+
+        {{!-- <!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <title></title>
+  </head>
+  <body>
+    Hey! Lets try uploading to s3 directly :) --}}
+
+    <form method="post" enctype="multipart/form-data" action="/upload">
+      <p>
+        <input type="text" name="title" placeholder="optional title" />
+      </p>
+
+      <p>
+        <input type="file" name="upl" multiple />
+      </p>
+
+      <p>
+        <input type="submit" />
+      </p>
+    </form>
+  {{!-- </body>
+</html> --}}
+
+
+
+
+        <button type="submit" class="btn">Create Post</button>
+    </form>
+</div>
+
+{{!-- add add-post.js --}}
+<script src="/javascript/add-post.js"></script>
