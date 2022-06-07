@@ -10,8 +10,8 @@ const helpers = require("./utils/helpers");
 const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
-const multer = require("multer");
-const upload = multer({ dest: "uploads/" });
+// const multer = require("multer");
+// const upload = multer({ dest: "uploads/" });
 
 const app = express();
 const PORT = process.env.PORT || 3001;
