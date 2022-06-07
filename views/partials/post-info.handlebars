@@ -1,7 +1,9 @@
-<div class="card">
-    <div class="card-header">
-       <h4><a class="link" href="/post/{{id}}">{{title}}</a></h4>
-        <p id="username">Posted by {{user.name}}</p>
+<div class = "container">
+    <div class="card">
+        <div class="card-header">
+        <h4><a class="link" href="/post/{{id}}">{{title}}</a></h4>
+            <p id="username">Posted by {{user.name}}</p>
+        </div>
+            <p class="card-body">{{description}} on {{format_date date_created}}</p>
     </div>
-        <p class="card-body">{{description}} on {{format_date date_created}}</p>
 </div>
