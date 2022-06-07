@@ -25,6 +25,7 @@ router.get("/", async (req, res) => {
   } catch (err) {
     res.status(404).json(userData);
   }
+});
 
 router.post("/login", async (req, res) => {
     try {
@@ -42,28 +43,34 @@ router.post("/login", async (req, res) => {
         }
 
         const passwordCheck = await userData.checkPassword(req.body.password);
-    } catch (err) {
-        res.status(404).json(userData);
-    }
-});
 
-router.get("/", async (req, res) => {
-    try {
-        const userData = await User.findAll({
-            exclude: [
-                {
-                    attributes: ["password"],
-                }
-            ]
+        if (!passwordCheck) {
+          res.status(400).json({
+            message: "Email or password is incorrect. Please retry."
+          });
+          return;
+        }
+
+        req.session.save(() => {
+          req.session.user_id = userData.id;
+          req.session.logged_in = true;
+
+          res.json({ user: userData, message: "Welcome back."})
         });
-        res.status(200).json(userData);
+
     } catch (err) {
         res.status(404).json(userData);
     }
 });
 
-// Create post route for logging in. Check table for an existing user fulfilling the login info.
-
-// Create post route for the logout.
+router.post('/logout', (req, res) => {
+  if (req.session.logged_in) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
+})
 
 module.exports = router;

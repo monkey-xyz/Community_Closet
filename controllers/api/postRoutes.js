@@ -38,9 +38,9 @@ router.get("/:id", async (req, res) => {
 
 // Create a Put route to update existing posts?
 
-router.put('/:id', async (req, res) => {
+router.put('/:id', Auth, async (req, res) => {
     try {
-        const postData = await Post.findAll({
+        const postData = await Post.findByPk({
             where: {
                 id: req.params.ids,
             },
@@ -51,7 +51,7 @@ router.put('/:id', async (req, res) => {
     }
 });
 
-router.post('/', async (req, res) => {
+router.post('/new', Auth, async (req, res) => {
     try {
         const postData = await Post.create({
             ...req.body,
@@ -62,6 +62,25 @@ router.post('/', async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+router.delete('/:id', Auth, async (req,res) => {
+  try {
+    const postData = await Post.destroy({
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id,
+      }
+    });
+
+    if (!postData) {
+      res.status(404).json({ message: "No post matches this id. Maybe try again?" });
+      return;
+    }
+    res.status(200).json(postData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
 
 // router.post("/upload", upload.array("upl", 25), function (req, res, next) {
 //   res.send({
