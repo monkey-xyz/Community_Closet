@@ -51,7 +51,7 @@ router.put('/:id', Auth, async (req, res) => {
     }
 });
 
-router.post('/new', Auth, async (req, res) => {
+router.post('/', Auth, async (req, res) => {
     try {
         const postData = await Post.create({
             ...req.body,
