@@ -53,7 +53,29 @@ router.get("/post/:id", async (req, res) => {
 
     const post = postData.get({ plain: true });
 
-    res.render("post", {
+    res.render("single-post", {
+      ...post,
+      logged_in: true,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get("/profile/edit/:id", async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ["name"],
+        },
+      ],
+    });
+
+    const post = postData.get({ plain: true });
+
+    res.render("edit-post", {
       ...post,
       logged_in: true,
     });
