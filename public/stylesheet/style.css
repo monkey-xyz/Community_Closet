@@ -1,16 +1,45 @@
 :root {
-    --dark-color : blue
-    
+    --dark-color : rgb(19, 211, 195);
+    --light-color : white;
+    --background : gray;
+
 }
 
 * {
     text-align: center;
 }
+
+.container {
+    background-color: var(--background);
+}
 #headermain {
-    background-color: rgb(102, 174, 233);
+    background-color: var(--dark-color)
 }
 
 .btn {
-    background-color: rgb(0, 0, 0);
-    color:rgb(58, 248, 248)
+    background-color: var(--dark-color);
+}
+
+.link {
+    color: var(--light-color)
+}
+
+#login-btn {
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+    margin: 100px;
+    
+}
+
+#username {
+    color: black
+}
+
+.btn {
+    color: var(--light-color)
+}
+
+.card-header {
+    background-color: var(--dark-color);
 }
