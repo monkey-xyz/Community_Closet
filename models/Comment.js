@@ -21,7 +21,7 @@ Comment.init(
             allowNull: false,
             references: 
             {
-                model: 'post',
+                model: 'Post',
                 key: 'id'
             }
         },
