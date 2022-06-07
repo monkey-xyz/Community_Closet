@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container-fluid">
     <header>
       <h1 id ="headermain">
        Community Closet
@@ -20,12 +20,15 @@
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <button class="btn"><a href="/profile">profile</a></button>
-        <button class="btn"><a class="link" href="/" id="logout">Logout</a></button>
+        <button class="btn"><a href="/profile">My Profile</a></button>
+
         <button class="btn"><a href="/homepage">Home</a></button>
-        <button class="btn"><a href="/new-post">Add new Post</a></button>
+
+        <button class="btn"><a class="link" href="/" id="logout">Logout</a></button>
         {{else}}
-        <button class="btn"><a href="/login">login</a></button>
+
+        <button class="btn" id="login-btn"><a href="/login">login</a></button>
+
         {{/if}}
       </nav>
 
