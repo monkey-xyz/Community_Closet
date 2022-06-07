@@ -28,6 +28,7 @@ This is an MVC application built with [MySQL2](https://www.npmjs.com/package/mys
 
 - [Community Closet Git Hub Repository](https://github.com/areitan/Community_Closet)
 - [Community Closet Deployed Link](https://community-closet-206.herokuapp.com/)
+- [Community Closet Presentation Slides](https://docs.google.com/presentation/d/199cV_egqvRHdBYLZsEMmN1OsVWL0Lxmc-d0fFGS4izE/edit#slide=id.p)
 
 
 ---
