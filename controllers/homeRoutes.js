@@ -5,7 +5,7 @@ const Auth = require("../utils/auth");
 // When server is ready, test the routes and update them with working code.
 // 1st get route should return all posts for the page, 2nd should work as a singular post page, 3rd should provide the user profile. 4th should provide Login page upon use.
 
-router.get("/homepage", Auth, async (req, res) => {
+router.get("/homepage", async (req, res) => {
   try {
     const postData = await Post.findAll({
       include: [
@@ -23,6 +23,17 @@ router.get("/homepage", Auth, async (req, res) => {
 
     res.render("homepage", {
       posts,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get("/new-post", async (req, res) => {
+  try {
+    res.render("new-post", {
+      logged_in: true,
     });
   } catch (err) {
     res.status(500).json(err);
