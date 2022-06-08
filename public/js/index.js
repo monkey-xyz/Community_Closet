@@ -1,23 +1,29 @@
-const imageForm = document.querySelector("#imageForm");
-const imageInput = document.querySelector("#imageInput");
+// const imageForm = document.querySelector("#imageForm");
+// const imageInput = document.querySelector("#imageInput");
 
-imageForm.addEventListener("submit", async (event) => {
-  event.preventDefault();
-  const file = imageInput.files[0];
+// imageForm.addEventListener("submit", async (event) => {
+//   event.preventDefault();
+//   const file = imageInput.files[0];
 
-  // get secure url from our server
-  const { url } = await fetch("/s3Url").then((res) => res.json());
-  console.log(url);
+//   // get secure url from our server
+//   const { url } = await fetch("/s3Url").then((res) => res.json());
+//   console.log(url);
 
-  // post the image direclty to the s3 bucket
-  await fetch(url, {
-    method: "PUT",
-    headers: {
-      "Content-Type": "multipart/form-data",
-    },
-    body: file,
-  });
+//   // post the image direclty to the s3 bucket
+//   await fetch(url, {
+//     method: "PUT",
+//     headers: {
+//       "Content-Type": "multipart/form-data",
+//     },
+//     body: file,
+//   });
 
-  const imageUrl = url.split("?")[0];
-  console.log(imageUrl);
-});
+//   const imageUrl = url.split("?")[0];
+//   console.log(imageUrl);
+// });
+
+document.getElementById("img-input-form").onchange = async function (event) {
+  document.getElementById("clothingpiece").innerHTML = `
+  <img src=${URL.createObjectURL(event.target.files[0])} width="200px" />
+  `;
+};
