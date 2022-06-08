@@ -1,10 +1,15 @@
-<div class = "container">
+
     
     {{> post-info post}}
 
     {{#if logged_in}}
+<div class=" container-fluid">
     <div class="card">
+         
         <h3 class="card-header"></h3>
+
+         {{> comments post.comments}}
+
         <form class="card-body comment-form" id="comment-form">
 
             <label class="form-label">Leave A Comment</label>
@@ -15,9 +20,9 @@
     </div>
     {{/if}}
 
-    {{> comments post.comments}}
-</div>
+    {{!-- {{> comments post.comments}} --}}
 
+</div>
 {{#if logged_in}}
 <script src="/js/comment.js"></script>
 {{/if}}
