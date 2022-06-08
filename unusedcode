@@ -11,7 +11,6 @@
 //   return uploadURL;
 // }
 
-
 // bodyParser = require("body-parser"),
 
 // app.use(bodyParser.json());
@@ -22,3 +21,26 @@
 //     region: "us-west-2",
 //     signatureVersion: "v4",
 //   });
+
+// {{!-- adding a picture --}}
+//   <div class="form-wrapper">
+//       <form
+//         action="/api/pictureRoutes/upload"
+//         method="post"
+//         enctype="multipart/form-data"
+//       >
+//         <input
+//           id="img-input-form"
+//           type="file"
+//           name="upl"
+//           accept=".png, .jpg"
+//         />
+//         <input id="saveBtn" type="submit" value="Save" />
+//       </form>
+//     </div>
+
+//           <button type="submit" class="btn">Create Post</button>
+//       </form>
+//   </div>
+
+// {{!-- add add-post.js --}}

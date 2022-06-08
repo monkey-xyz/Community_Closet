@@ -1,6 +1,27 @@
-<div class="card">
-    <div class="card-header">
-        <h4><a class="link" href="/profile/edit/{{id}}">{{title}}</a></h4>
-        <p>{{content}}</p>
-    </div>
+
+<div class="card" id="postinfo" style="width: 40rem;">
+
+  <div class="card-body">
+    
+    <h4 class="card-header"><a class="link" href="/post/{{id}}">{{title}}</a></h4>
+
+    <img src= "{{picture.url}}" class="card-img-top" alt="...">
+
+    <p class="card-text" id="username">Posted by {{user.name}} on {{format_date date_created}}</p>
+
+  </div>
+  
+    <p class="card-body">{{description}}</p>
+
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Size: {{size}}</li>
+
+    <li class="list-group-item">Location: {{location}}</li>
+  </ul>
+
+{{!-- add route? --}}
+  <button type="submit" class="btn" href="/edit-post">Update Post</button>
+  <br>
+   <button type="submit" class="btn" href="/edit-post">Delete Post</button>
 </div>
+

@@ -1,27 +1,43 @@
 :root {
-    --dark-color : rgb(19, 211, 195);
-    --light-color : white;
-    --background : gray;
+    --dark-color : #173F2E;
+    --light-color : #13D3C3;
+    --med-color : #545479;
+    --shadow-color:#30306b;
 
 }
 
 * {
     text-align: center;
+    font-family: 'Merienda', cursive;
 }
 
 .container {
     background-color: var(--background);
 }
 #headermain {
-    background-color: var(--dark-color)
+    background-color: var(--light-color);
+    height: 80px;
+    border-bottom: solid 3px var(--med-color);
+}
+
+#headermaintxt {
+    padding-top: 3px;
+
+    font-size: 70px;
+}
+
+#login-signup {
+    text-align:justify;
 }
 
 .btn {
-    background-color: var(--dark-color);
+    background-color: var(--med-color);
+    border-bottom: var(--shadow-color) 2px solid;
+    border-left: var(--shadow-color) 2px solid;
 }
 
 .link {
-    color: var(--light-color)
+    color: white;
 }
 
 #login-btn {
@@ -42,4 +58,10 @@
 
 .card-header {
     background-color: var(--dark-color);
+    color:white;
+}
+
+#postinfo {
+    margin-left: 25%;
+    
 }
