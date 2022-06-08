@@ -3,6 +3,9 @@
     --light-color : #13D3C3;
     --med-color : #545479;
     --shadow-color:#30306b;
+    --shadow-color-two:#0f5739;
+    --font-color:white;
+
 
 }
 
@@ -12,8 +15,10 @@
 }
 
 .container {
-    background-color: var(--background);
+    background-color: var(--dark-color);
+    color:var(--font-color);
 }
+
 #headermain {
     background-color: var(--light-color);
     height: 80px;
@@ -22,14 +27,12 @@
 
 #headermaintxt {
     padding-top: 3px;
-
     font-size: 70px;
 }
 
-#login-signup {
-    text-align:justify;
+#login-signup{
+    color: var(--font-color);
 }
-
 .btn {
     background-color: var(--med-color);
     border-bottom: var(--shadow-color) 2px solid;
@@ -37,7 +40,7 @@
 }
 
 .link {
-    color: white;
+    color: var(--font-color);
 }
 
 #login-btn {
@@ -58,7 +61,7 @@
 
 .card-header {
     background-color: var(--dark-color);
-    color:white;
+    color:var(--font-color);
 }
 
 #postinfo {
