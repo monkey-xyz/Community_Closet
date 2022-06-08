@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/areitan/Community_Closet#readme",
   "dependencies": {
-    "aws-sdk": "^2.1147.0",
+    "aws-sdk": "^2.1150.0",
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.3",
     "dotenv": "^16.0.1",
