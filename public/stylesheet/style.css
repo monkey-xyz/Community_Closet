@@ -43,3 +43,8 @@
 .card-header {
     background-color: var(--dark-color);
 }
+
+#postinfo {
+    margin-left: 25%;
+    
+}
