@@ -1,10 +1,8 @@
 const router = require("express").Router();
-const { User, Post, Picture, Comment } = require("../models");
+const { User, Post, Comment } = require("../models");
 const Auth = require("../utils/auth");
 
-// When server is ready, test the routes and update them with working code.
-// 1st get route should return all posts for the page, 2nd should work as a singular post page, 3rd should provide the user profile. 4th should provide Login page upon use.
-
+// Homepage
 router.get("/homepage", async (req, res) => {
   try {
     const postData = await Post.findAll({
@@ -27,6 +25,7 @@ router.get("/homepage", async (req, res) => {
   }
 });
 
+// New Post Form
 router.get("/new-post", async (req, res) => {
   try {
     res.render("new-post", {
@@ -37,6 +36,8 @@ router.get("/new-post", async (req, res) => {
   }
 });
 
+
+// Singular Post
 router.get("/post/:id", async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
@@ -54,11 +55,8 @@ router.get("/post/:id", async (req, res) => {
 
     const post = postData.get({ plain: true });
 
-    //const comment = commentData.get({ plain: true });
-
     res.render("single-post", {
       post,
-      //...comment,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -66,6 +64,8 @@ router.get("/post/:id", async (req, res) => {
   }
 });
 
+
+// Edit Own (User) Post
 router.get("/edit-post/:id", async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
@@ -88,6 +88,7 @@ router.get("/edit-post/:id", async (req, res) => {
   }
 });
 
+// User's Posts
 router.get("/profile", Auth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
@@ -96,9 +97,6 @@ router.get("/profile", Auth, async (req, res) => {
         {
           model: Post,
         },
-        // {
-        //   model: Picture,
-        // }
       ],
     });
 
@@ -113,6 +111,8 @@ router.get("/profile", Auth, async (req, res) => {
   }
 });
 
+
+//Login Page
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
     res.redirect("/profile");
