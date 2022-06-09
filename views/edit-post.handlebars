@@ -4,7 +4,7 @@
         <form class="card-body edit-post-form">
             {{!-- post title --}}
             <label for="post-title" class="form-label">Title</label>
-            <input name="post-title" type="text" value="{{post.name}}" class="form-input" />
+            <input name="post-title" type="text" value="{{post.title}}" class="form-input" />
 
             {{!-- post description --}}
             <label class="form-label" for="content">Description</label>
@@ -16,9 +16,6 @@
             <label class="form-label" for="content">Size</label>
             <input name="content" type="text" value="{{post.size}}" class="form-input" />
 
-            {{!-- post photos --}}
-            {{!-- <label class="form-label" for="content">Add photos</label>
-            <input name="content" type="text" value="{{picture.post_id}}" class="form-input" /> --}}
 
 
             <button type="submit" class="btn">Update Post</button>
