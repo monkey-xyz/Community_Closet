@@ -2,6 +2,7 @@ const router = require("express").Router();
 const { Post, User } = require("../../models");
 const Auth = require("../../utils/auth");
 
+// Edit singular post
 router.put('/:id', Auth, async (req, res) => {
     try {
         const postData = await Post.findByPk({
@@ -15,6 +16,7 @@ router.put('/:id', Auth, async (req, res) => {
     }
 });
 
+// Post
 router.post('/', Auth, async (req, res) => {
     try {
         const postData = await Post.create({
@@ -27,6 +29,7 @@ router.post('/', Auth, async (req, res) => {
     }
 });
 
+// Delete post
 router.delete('/:id', Auth, async (req,res) => {
   try {
     const postData = await Post.destroy({
@@ -60,7 +63,6 @@ router.delete('/:id', Auth, async (req,res) => {
 //   });
 // });
 
-//PUT /api/posts/:id route (update a post)
 router.put('/:id', Auth, (req, res) => {
   Post.update({
           title: req.body.title,
