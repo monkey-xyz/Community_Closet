@@ -12,10 +12,7 @@ router.get("/homepage", async (req, res) => {
         {
           model: User,
           attributes: ["name"],
-        }, 
-        // {
-        //   model: Picture,
-        // }
+        },
       ],
     });
 
@@ -99,9 +96,6 @@ router.get("/profile", Auth, async (req, res) => {
         {
           model: Post,
         },
-        // {
-        //   model: Picture,
-        // }
       ],
     });
 
