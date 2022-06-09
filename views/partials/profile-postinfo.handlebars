@@ -5,18 +5,18 @@
     
     <h4 class="card-header"><a class="link" href="/post/{{id}}">{{title}}</a></h4>
 
-    <img src= "{{picture.url}}" class="card-img-top" alt="...">
+    <img src= "{{picture.upl}}" class="card-img-top" alt="...">
 
     <p class="card-text" id="username">Posted by {{user.name}} on {{format_date date_created}}</p>
 
   </div>
   
-    <p class="card-body">{{description}}</p>
+    <p class="card-body description">{{description}}</p>
 
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Size: {{size}}</li>
+    <li class="list-group-item size">Size: {{size}}</li>
 
-    <li class="list-group-item">Location: {{location}}</li>
+    <li class="list-group-item location">Location: {{location}}</li>
   </ul>
 
 {{!-- add route? --}}
