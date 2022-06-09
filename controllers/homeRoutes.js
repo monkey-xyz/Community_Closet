@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Post, Picture, Comment } = require("../models");
+const { User, Post, Comment } = require("../models");
 const Auth = require("../utils/auth");
 
 // When server is ready, test the routes and update them with working code.
@@ -13,9 +13,6 @@ router.get("/homepage", async (req, res) => {
           model: User,
           attributes: ["name"],
         },
-        // {
-        //   model: Picture,
-        // }
       ],
     });
 
@@ -57,11 +54,8 @@ router.get("/post/:id", async (req, res) => {
 
     const post = postData.get({ plain: true });
 
-    //const comment = commentData.get({ plain: true });
-
     res.render("single-post", {
       post,
-      //...comment,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
