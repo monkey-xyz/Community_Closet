@@ -7,6 +7,18 @@ async function newFormHandler(event) {
   const content = document.querySelector('input[name="content"]').value;
   // const picture = document.querySelector('input[name="upl"]').value; //is that how we would add it to the post?
 
+    //retrrieve user input and get ready to add to database
+    const imageuploadresponse = await fetch(`/api/pictures/upload`, {
+      method: "POST",
+      body: JSON.stringify({
+        title,
+        content,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
   //retrrieve user input and get ready to add to database
   const response = await fetch(`/api/posts`, {
     method: "POST",
@@ -28,6 +40,4 @@ async function newFormHandler(event) {
 }
 
 //listening for button click on submit
-document
-  .querySelector("#new-post-form")
-  .addEventListener("submit", newFormHandler);
+document.querySelector("#postBtn").addEventListener("click", newFormHandler);
