@@ -7,12 +7,11 @@ const seedPictures = require("./pictureSeed");
 
 //seeding the database with user data
 const seedAll = async () => {
-    await sequelize.sync({ force: true });
-    await seedUsers();
-    await seedPosts();
-    await seedComments();
-    await seedPictures();
-    process.exit(0);
-  };
-  
-  seedAll();
+  await sequelize.sync({ force: true });
+  await seedUsers();
+  await seedPosts();
+  await seedComments();
+  process.exit(0);
+};
+
+seedAll();

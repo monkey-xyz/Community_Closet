@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Post, Picture, Comment } = require("../models");
+const { User, Post, Comment } = require("../models");
 const Auth = require("../utils/auth");
 
 // When server is ready, test the routes and update them with working code.

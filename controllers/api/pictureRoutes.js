@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Picture, Post } = require("../../models");
+const { Post } = require("../../models");
 const Auth = require("../../utils/auth");
 const upload = require("../../s3");
 
