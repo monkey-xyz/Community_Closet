@@ -2,7 +2,9 @@ async function editFormHandler(event) {
     event.preventDefault();
   
     const title = document.querySelector('input[name="post-title"]').value.trim();
-    const content = document.querySelector('input[name="content"]').value.trim();
+    const description = document.querySelector('input[name="description"]').value.trim();
+    const location = document.querySelector('input[name="location"]').value.trim();
+    const size = document.querySelector('input[name="size"]').value.trim();
   
     const id = window.location.toString().split('/')[
       window.location.toString().split('/').length - 1
@@ -13,8 +15,11 @@ async function editFormHandler(event) {
         body: JSON.stringify({
           post_id: id,
           title,
-          description
+          description,
+          location,
+          size
         }),
+        
         headers: {
           'Content-Type': 'application/json'
         }
@@ -28,4 +33,4 @@ async function editFormHandler(event) {
   
   }
   
-  document.querySelector('.edit-post-btn').addEventListener('submit', editFormHandler);
+  document.querySelector('.edit-post-form').addEventListener('submit', editFormHandler);
