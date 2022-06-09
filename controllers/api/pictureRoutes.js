@@ -9,22 +9,16 @@ router.post("/upload", upload.single("upl"), async function (req, res, next) {
     return;
   }
 
-  // const post_id = req.params.id;
-  // const uploadedImage = `
-  // <img src=${req.file.location} width="200px" />
-  // `;
-  
-await Post.create( {
-  title: req.body["post-title"],
-  img_url: req.file.location,
-  description: req.body["description"],
-  size: req.body["size"],
-  location: req.body["location"]
-
-})
-res.redirect('/profile')
-console.log(req.file.location);
-console.log(req.body);
+  await Post.create({
+    title: req.body["post-title"],
+    img_url: req.file.location,
+    description: req.body["description"],
+    size: req.body["size"],
+    location: req.body["location"],
+  });
+  res.redirect("/profile");
+  console.log(req.file.location);
+  console.log(req.body);
 });
 
 module.exports = router;
