@@ -4,17 +4,20 @@
       <form action="/api/pictures/upload"
         method="post"
         enctype="multipart/form-data" class="card-body new-post-form" id="new-post-form">
+
+
+        {{!-- <form class="card-body new-post-form" id="new-post-form"></form> --}}
           <label for="post-title" class="form-label">Title</label>
           <input type="text" id="post-title" name="post-title" class="form-input" />
 
           <label class="form-label" for="content">Description</label>
-          <input id="content" name="content" class="form-input" />
+          <input id="content" name="description" class="form-input" />
 
           <label class="form-label" for="content">Location</label>
-          <input id="content" name="content" class="form-input" />
+          <input id="content" name="location" class="form-input" />
 
           <label class="form-label" for="content">Size</label>
-          <input id="content" name="content" class="form-input" />
+          <input id="content" name="size" class="form-input" />
 
       
 {{!-- adding a picture --}}
@@ -26,9 +29,9 @@
           name="upl"
           accept=".png, .jpg"
         />
-        <input type="submit" value="Save" />
+        <input type="submit" value="Create Post"  class="btn" />
     </div>
-          <button  id="postBtn" class="btn">Create Post</button>
+          {{!-- <button  id="postBtn" class="btn">Create Post</button> --}}
       </form>
   </div>
 

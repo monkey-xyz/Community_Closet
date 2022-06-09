@@ -20,10 +20,20 @@
 .new-listing {
     background-color:var(--dark-color)
 }
+
+.description, .size, .location {
+    color: black;
+}
+
+
+.edit-card {
+    background-color: var(--dark-color);
+}
 .container {
     background-color: var(--dark-color);
     color:var(--font-color);
 }
+
 
 #headermain {
     background-color: var(--light-color);

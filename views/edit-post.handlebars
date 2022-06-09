@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="card">
+    <div class="card edit-card">
         <h3 class="card-header">Edit Post</h3>
         <form class="card-body edit-post-form">
             {{!-- post title --}}
@@ -8,13 +8,13 @@
 
             {{!-- post description --}}
             <label class="form-label" for="content">Description</label>
-            <input name="content" type="text" value="{{post.description}}" class="form-input" />
+            <input name="description" type="text" value="{{post.description}}" class="form-input" />
             
             <label class="form-label" for="content">Location</label>
-            <input name="content" type="text" value="{{post.location}}" class="form-input" />
+            <input name="location" type="text" value="{{post.location}}" class="form-input" />
 
             <label class="form-label" for="content">Size</label>
-            <input name="content" type="text" value="{{post.size}}" class="form-input" />
+            <input name="size" type="text" value="{{post.size}}" class="form-input" />
 
 
 
