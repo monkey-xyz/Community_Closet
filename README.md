@@ -5,7 +5,7 @@
 ---
 ## Description
 
-This is an MVC application built with [MySQL2](https://www.npmjs.com/package/mysql2), [Sequelize](https://www.npmjs.com/package/sequelize), [Express.js](https://www.npmjs.com/package/express), [express-session](https://www.npmjs.com/package/express-session), [express-handlebars](https://www.npmjs.com/package/express-handlebars), [bcrypt package](https://www.npmjs.com/package/bcrypt), [multer-s3](https://github.com/anacronw/multer-s3#readme), a [dotenv](https://www.npmjs.com/package/dotenv) package, and deployed with Heroku.
+Especially now, with the rising cost of everything, ways to share items with neighbors are valuable. We wanted to design a site where users could post clothing items they no longer needed for others in the community who might be able to use them. 
   
 
   [Project Proposal](https://docs.google.com/document/d/123ta--UUTVPxiG5ZRC1CdBKswlroDOcPtE_ReHDATL0/edit)
@@ -24,7 +24,7 @@ This is an MVC application built with [MySQL2](https://www.npmjs.com/package/mys
 ---
 ## Installation
 
- 
+ This is an MVC application built with [MySQL2](https://www.npmjs.com/package/mysql2), [Sequelize](https://www.npmjs.com/package/sequelize), [Express.js](https://www.npmjs.com/package/express), [express-session](https://www.npmjs.com/package/express-session), [express-handlebars](https://www.npmjs.com/package/express-handlebars), [bcrypt package](https://www.npmjs.com/package/bcrypt), [multer-s3](https://github.com/anacronw/multer-s3#readme), a [dotenv](https://www.npmjs.com/package/dotenv) package, and deployed with Heroku.
 
 - [Community Closet Git Hub Repository](https://github.com/areitan/Community_Closet)
 - [Community Closet Deployed Link](https://community-closet-206.herokuapp.com/)
@@ -44,7 +44,7 @@ This is an MVC application built with [MySQL2](https://www.npmjs.com/package/mys
 ---
 ## Tests
 
-
+Testing was done by manually entering data as a user would, and bytesting routes with [Insomnia](https://insomnia.rest/)
 
 --- 
 ## Contribute
