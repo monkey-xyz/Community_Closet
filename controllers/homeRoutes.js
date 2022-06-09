@@ -48,6 +48,10 @@ router.get("/post/:id", async (req, res) => {
           model: User,
           attributes: ["name"],
         },
+        {
+          model: Comment,
+          attributes: ["id", "body", "post_id", "user_id"],
+        }
       ],
     })
 
@@ -65,7 +69,7 @@ router.get("/post/:id", async (req, res) => {
   }
 });
 
-router.get("/profile/edit/:id", async (req, res) => {
+router.get("/edit-post/:id", async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
