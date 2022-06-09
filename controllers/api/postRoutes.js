@@ -51,7 +51,6 @@ router.delete('/:id', Auth, async (req,res) => {
   }
 });
 
-<<<<<<< HEAD
 router.put('/:id', Auth, (req, res) => {
   Post.update({
           title: req.body.title,
@@ -72,7 +71,8 @@ router.put('/:id', Auth, (req, res) => {
       .catch(err => {
           res.status(500).json(err);
       });
-=======
+});
+
 //PUT /api/posts/:id route (update a post)
 router.put("/:id", Auth, (req, res) => {
   Post.update(
@@ -100,7 +100,28 @@ router.put("/:id", Auth, (req, res) => {
     .catch((err) => {
       res.status(500).json(err);
     });
->>>>>>> 279ba04 (deletes unused code)
+  });
+
+router.put('/:id', Auth, (req, res) => {
+  Post.update({
+          title: req.body.title,
+          description: req.body.description,
+          location: req.body.location,
+          size: req.body.size
+      }, {
+          where: {
+              id: req.params.id
+          }
+      }).then(postData => {
+          if (!postData) {
+              res.status(404).json({ message: 'Sorry! No post was found with this id' });
+              return;
+          }
+          res.json(postData);
+      })
+      .catch(err => {
+          res.status(500).json(err);
+      });
 });
 
 router.post("/");
