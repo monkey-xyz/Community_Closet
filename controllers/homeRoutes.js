@@ -12,7 +12,7 @@ router.get("/homepage", async (req, res) => {
         {
           model: User,
           attributes: ["name"],
-        }, 
+        },
         // {
         //   model: Picture,
         // }
@@ -51,9 +51,9 @@ router.get("/post/:id", async (req, res) => {
         {
           model: Comment,
           attributes: ["id", "body", "post_id", "user_id"],
-        }
+        },
       ],
-    })
+    });
 
     const post = postData.get({ plain: true });
 
@@ -99,13 +99,10 @@ router.get("/profile", Auth, async (req, res) => {
         {
           model: Post,
         },
-        // {
-        //   model: Picture,
-        // }
       ],
     });
 
-    const user = userData.get({ plain: true })
+    const user = userData.get({ plain: true });
 
     res.render("profile", {
       ...user,
