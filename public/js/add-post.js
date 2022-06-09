@@ -1,8 +1,5 @@
 //Adding a new Post
 
-const res = require("express/lib/response");
-const { decorators } = require("handlebars");
-
 async function newFormHandler(event) {
   event.preventDefault();
 
