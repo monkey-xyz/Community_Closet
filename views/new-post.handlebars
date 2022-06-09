@@ -1,7 +1,9 @@
   <div class="card">
       <h3 class="card-header">Add a new listing</h3>
 
-      <form class="card-body new-post-form" id="new-post-form">
+      <form action="/api/pictures/upload"
+        method="post"
+        enctype="multipart/form-data" class="card-body new-post-form" id="new-post-form">
           <label for="post-title" class="form-label">Title</label>
           <input type="text" id="post-title" name="post-title" class="form-input" />
 
@@ -17,11 +19,6 @@
       
 {{!-- adding a picture --}}
   <div class="form-wrapper">
-      <form
-        action="/api/pictureRoutes/upload"
-        method="post"
-        enctype="multipart/form-data"
-      >
       <div id="clothingpiece"></div>
         <input
           id="img-input-form"
@@ -30,21 +27,12 @@
           accept=".png, .jpg"
         />
         <input id="saveBtn" type="submit" value="Save" />
-      </form>
     </div>
-
-
           <button type="submit" class="btn">Create Post</button>
       </form>
   </div>
 
 {{!-- add add-post.js --}}
-
-
-
-
-
-
 
 <script src="/js/index.js"></script>
 <script src="/js/add-post.js"></script>
