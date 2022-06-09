@@ -57,6 +57,8 @@ In order to create this application, we used the skills we have at the moment. W
 - [multer-s3](https://github.com/anacronw/multer-s3#readme)
 - [Stack OverFlow: Uploading image to amazon s3 using multer-s3 nodejs](https://stackoverflow.com/questions/40494050/uploading-image-to-amazon-s3-using-multer-s3-nodejs)
 - [Raddy: Upload and Store Images in MySQL using Node.Js, Express, Express-FileUpload & Express-Handlebars](https://www.youtube.com/watch?v=hyJiNTFtQic)
+- [ColoSpace](https://mycolor.space/)
+
 
 - Trilogy Education Services, LLC for example code throughout the week 14 exercises.
 
