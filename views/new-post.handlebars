@@ -1,14 +1,15 @@
   <div class="card new-listing">
       <h3 class="card-header">Add a new listing</h3>
 
-      <form action="/api/pictures/upload"
-        method="post"
+      <form
+       {{!-- action="/api/pictures/upload"
+        method="post" --}}
         enctype="multipart/form-data" class="card-body new-post-form" id="new-post-form">
           <label for="post-title" class="form-label">Title</label>
           <input type="text" id="post-title" name="post-title" class="form-input" />
 
-          <label class="form-label" for="content">Description</label>
-          <input id="content" name="content" class="form-input" />
+          <label class="form-label" for="description">Description</label>
+          <input id="description" name="description" class="form-input" />
 
           <label class="form-label" for="content">Location</label>
           <input id="content" name="content" class="form-input" />
@@ -28,7 +29,7 @@
         />
         <input type="submit" value="Save" />
     </div>
-          <button  id="postBtn" class="btn">Create Post</button>
+          <button id="postBtn" class="btn">Create Post</button>
       </form>
   </div>
 
