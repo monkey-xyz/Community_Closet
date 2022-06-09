@@ -1,8 +1,9 @@
 const router = require('express').Router();
-const { Comment } = require ('../../models');
+const { Comment, User } = require ('../../models');
 const Auth = require("../../utils/auth");
 
-// Post comment
+// Create a post route for comments to be created on a respective post. Maybe add delete route?
+
 router.post('/', Auth, async (req, res) => {
     try {
         const commentData = await Comment.create({
