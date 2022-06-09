@@ -15,7 +15,6 @@ router.get("/homepage", async (req, res) => {
         }, 
         // {
         //   model: Picture,
-        //   attributes: ["url"],
         // }
       ],
     });
@@ -70,7 +69,7 @@ router.get("/post/:id", async (req, res) => {
   }
 });
 
-router.get("/edit/:id", async (req, res) => {
+router.get("/edit-post/:id", async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
