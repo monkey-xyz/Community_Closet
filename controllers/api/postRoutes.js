@@ -2,20 +2,7 @@ const router = require("express").Router();
 const { Post, User } = require("../../models");
 const Auth = require("../../utils/auth");
 
-router.put('/:id', Auth, async (req, res) => {
-    try {
-        const postData = await Post.findByPk({
-            where: {
-                id: req.params.ids,
-            },
-        });
-        res.status(200).json(postData);
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
-
-// Post
+// Post, outdated!
 router.post('/', Auth, async (req, res) => {
     try {
         const postData = await Post.create({
@@ -73,5 +60,14 @@ router.put('/:id', Auth, (req, res) => {
       });
 });
 
-router.post("/");
+router.get('/', async (req, res) => {
+  try {
+    const data = await Post.findAll();
+    res.status(200).json(data);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
+
+
 module.exports = router;
