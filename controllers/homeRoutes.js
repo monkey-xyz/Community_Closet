@@ -54,8 +54,16 @@ router.get("/post/:id", async (req, res) => {
 
     const post = postData.get({ plain: true });
 
+<<<<<<< HEAD
     res.render("single-post", {
       post,
+=======
+    // const comment = commentData.get({ plain: true });
+
+    res.render("single-post", {
+      post,
+      // ...comment,
+>>>>>>> a00d43a (update post path)
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -92,20 +100,68 @@ router.get("/profile", Auth, async (req, res) => {
       include: [
         {
           model: Post,
+<<<<<<< HEAD
         },
+=======
+        }
+        // {
+        //   model: Picture,
+        // }
+>>>>>>> a00d43a (update post path)
       ],
     });
 
     const user = userData.get({ plain: true });
 
     res.render("profile", {
-      ...user,
+      user,
       logged_in: true,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
+
+
+///////////////////////////////////////////
+
+// router.get('/profile', Auth, (req, res) => {
+//   Post.findAll({
+//           where: {
+//               user_id: req.session.user_id
+//           },
+//           attributes: [
+//               'id',
+//               'title',
+//               'description',
+//               'date_created'
+//           ],
+//           include: [{
+//                   model: Comment,
+//                   attributes: ['id', 'body', 'post_id', 'user_id'],
+//                   include: {
+//                       model: User,
+//                       attributes: ['name']
+//                   }
+//               },
+//               {
+//                   model: User,
+//                   attributes: ['name']
+//               }
+//           ]
+//       })
+//       .then(postData => {
+//           const posts = postData.map(post => post.get({ plain: true }));
+//           res.render('profile', { posts, logged_in: true });
+//       })
+//       .catch(err => {
+//           res.status(500).json(err);
+//       });
+// });
+
+
+/////////////////////////////////////////////
 
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
