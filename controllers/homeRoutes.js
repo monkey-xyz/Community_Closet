@@ -54,16 +54,8 @@ router.get("/post/:id", async (req, res) => {
 
     const post = postData.get({ plain: true });
 
-<<<<<<< HEAD
     res.render("single-post", {
       post,
-=======
-    // const comment = commentData.get({ plain: true });
-
-    res.render("single-post", {
-      post,
-      // ...comment,
->>>>>>> a00d43a (update post path)
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -100,14 +92,7 @@ router.get("/profile", Auth, async (req, res) => {
       include: [
         {
           model: Post,
-<<<<<<< HEAD
         },
-=======
-        }
-        // {
-        //   model: Picture,
-        // }
->>>>>>> a00d43a (update post path)
       ],
     });
 
