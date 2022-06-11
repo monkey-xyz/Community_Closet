@@ -24,7 +24,22 @@ Especially now, with the rising cost of everything, ways to share items with nei
 ---
 ## Installation
 
- This is an MVC application built with [MySQL2](https://www.npmjs.com/package/mysql2), [Sequelize](https://www.npmjs.com/package/sequelize), [Express.js](https://www.npmjs.com/package/express), [express-session](https://www.npmjs.com/package/express-session), [express-handlebars](https://www.npmjs.com/package/express-handlebars), [bcrypt package](https://www.npmjs.com/package/bcrypt), [AWS SDK for JavaScript](https://www.npmjs.com/package/aws-sdk), [@aws-sdk/client-s3](https://www.npmjs.com/package/@aws-sdk/client-s3), [multer-s3](https://github.com/anacronw/multer-s3#readme), a [dotenv](https://www.npmjs.com/package/dotenv) package, and deployed with Heroku.
+ This is an MVC application built with the following technologies:
+ - [MySQL2](https://www.npmjs.com/package/mysql2)
+ - [Sequelize](https://www.npmjs.com/package/sequelize)
+ - [Express.js](https://www.npmjs.com/package/express)
+ - [express-session](https://www.npmjs.com/package/express-session)
+ - [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize)
+ - [express-handlebars](https://www.npmjs.com/package/express-handlebars)
+ - [bcrypt package](https://www.npmjs.com/package/bcrypt)
+ - [AWS SDK for JavaScript](https://www.npmjs.com/package/aws-sdk)
+ - [@aws-sdk/client-s3](https://www.npmjs.com/package/@aws-sdk/client-s3), 
+ - [multer-s3](https://github.com/anacronw/multer-s3#readme)
+ - [dotenv](https://www.npmjs.com/package/dotenv) package
+ - [Heroku](https://signup.heroku.com/)
+
+
+### Application Links
 
 - [Community Closet Git Hub Repository](https://github.com/areitan/Community_Closet)
 - [Community Closet Deployed Link](https://community-closet-206.herokuapp.com/)
@@ -34,8 +49,8 @@ Especially now, with the rising cost of everything, ways to share items with nei
 ---
 ## Usage
 
-
-
+1. Go to the deplyed application: [Community Closet Deployed Link](https://community-closet-206.herokuapp.com/)
+2. 
 
 ### Initialization
 ![Initializing the application](/assets/images/********.png)
@@ -59,8 +74,6 @@ In order to create this application, we used the skills we have at the moment. W
 - [Stack OverFlow: Uploading image to amazon s3 using multer-s3 nodejs](https://stackoverflow.com/questions/40494050/uploading-image-to-amazon-s3-using-multer-s3-nodejs)
 - [Raddy: Upload and Store Images in MySQL using Node.Js, Express, Express-FileUpload & Express-Handlebars](https://www.youtube.com/watch?v=hyJiNTFtQic)
 - [ColoSpace](https://mycolor.space/)
-
-
 - Trilogy Education Services, LLC for example code throughout the week 14 exercises.
 
 
