@@ -37,7 +37,7 @@
 
 #headermain {
     background-color: var(--light-color);
-    height: 80px;
+    height: 90px;
     border-bottom: solid 3px var(--med-color);
 }
 
