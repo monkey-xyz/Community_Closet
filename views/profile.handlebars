@@ -1,13 +1,20 @@
 {{#if posts.length}}
-<section>
+
+<div>
+<p id="greeting">Welcome back {{name}} !</p>
   <h2>Your Posts</h2>
+  
     {{#each posts as |post|}}
+
       {{> profile-postinfo post}}
+
     {{/each}}
 
-</section>
+</div>
 {{/if}}
 
-<button type="submit" class="btn"><a class="link" href="/profile/new">Create A New Post!</a></button>
 
-<script src="/javascript/add-post.js"></script>
+
+<button class="btn btn-primary" type="button"><a class="link" href="/new-post">Create A New Post!</a></button>
+
+<script src="/js/add-post.js"></script>

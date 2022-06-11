@@ -12,21 +12,6 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.get("/", async (req, res) => {
-  try {
-    const userData = await User.findAll({
-      exclude: [
-        {
-          attributes: ["password"],
-        },
-      ],
-    });
-    res.status(200).json(userData);
-  } catch (err) {
-    res.status(404).json(userData);
-  }
-});
-
 router.post("/login", async (req, res) => {
     try {
         const userData = await User.findOne({
@@ -71,6 +56,6 @@ router.post('/logout', (req, res) => {
   } else {
     res.status(404).end();
   }
-})
+});
 
 module.exports = router;

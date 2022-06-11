@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Post, Picture } = require("../models");
+const { User, Post, Comment } = require("../models");
 const Auth = require("../utils/auth");
 
 // When server is ready, test the routes and update them with working code.
@@ -12,10 +12,7 @@ router.get("/homepage", async (req, res) => {
         {
           model: User,
           attributes: ["name"],
-        }, 
-        // {
-        //   model: Picture,
-        // }
+        },
       ],
     });
 
@@ -30,7 +27,42 @@ router.get("/homepage", async (req, res) => {
   }
 });
 
+router.get("/new-post", async (req, res) => {
+  try {
+    res.render("new-post", {
+      logged_in: true,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get("/post/:id", async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ["name"],
+        },
+        {
+          model: Comment,
+        },
+      ],
+    });
+
+    const post = postData.get({ plain: true });
+
+    res.render("single-post", {
+      post,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get("/edit-post/:id", async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
@@ -43,7 +75,7 @@ router.get("/post/:id", async (req, res) => {
 
     const post = postData.get({ plain: true });
 
-    res.render("post", {
+    res.render("edit-post", {
       ...post,
       logged_in: true,
     });
@@ -60,13 +92,10 @@ router.get("/profile", Auth, async (req, res) => {
         {
           model: Post,
         },
-        // {
-        //   model: Picture,
-        // }
       ],
     });
 
-    const user = userData.get({ plain: true })
+    const user = userData.get({ plain: true });
 
     res.render("profile", {
       ...user,

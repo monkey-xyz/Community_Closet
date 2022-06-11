@@ -1,22 +1,33 @@
 
-{{> post-info post}}
+    
+    {{> post-info post}}
 
-{{#if logged_in}}
-<div class="card">
-    <h3 class="card-header"></h3>
-    <form class="card-body comment-form" id="comment-form">
+    {{#if logged_in}}
+<div class=" container-fluid">
+    <div class="card comment-card">
+         
+        <h3 class="card-header"></h3>
 
-        <label class="form-label">Leave A Comment</label>
-        <input id="comment" name="comment-body" class="form-input" />
+    
+        <form class="card-body comment-form" id="comment-form">
 
-        <button type="submit" class="btn">Submit</button>
-    </form>
+
+            <label class="form-label">Leave A Comment</label>
+            
+            <input id="comment" name="comment-body" class="form-input" />
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+    {{/if}}
+
+    {{> comments post.comments}}
+
 </div>
-{{/if}}
-
-{{> comments post.comments}}
-
-{{!-- add comments.js --}}
 {{#if logged_in}}
-<script src="/javascript/comment.js"></script>
+<script src="/js/comment.js"></script>
 {{/if}}
+
+
+
+

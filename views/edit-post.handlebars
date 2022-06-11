@@ -1,27 +1,31 @@
-<div class="card">
-    <h3 class="card-header">Edit Post</h3>
-    <form class="card-body edit-post-form">
-        {{!-- post title --}}
-        <label for="post-title" class="form-label">Title</label>
-        <input name="post-title" type="text" value="{{post.name}}" class="form-input" />
+<div class="container">
+    <div class="card edit-card">
+        <h3 class="card-header">Edit Post</h3>
+        <form class="card-body edit-post-form">
+            {{!-- post title --}}
+            <label for="post-title" class="form-label">Title</label>
+            <input name="post-title" type="text" value="{{post.title}}" class="form-input" />
 
-        {{!-- post description --}}
-        <label class="form-label" for="content">Description</label>
-        <input name="content" type="text" value="{{post.description}}" class="form-input" />
+            {{!-- post description --}}
+            <label class="form-label" for="content">Description</label>
+            <input name="description" type="text" value="{{post.description}}" class="form-input" />
+            
+            <label class="form-label" for="content">Location</label>
+            <input name="location" type="text" value="{{post.location}}" class="form-input" />
 
-        {{!-- post photos --}}
-        {{!-- <label class="form-label" for="content">Add photos</label>
-        <input name="content" type="text" value="{{picture.post_id}}" class="form-input" /> --}}
+            <label class="form-label" for="content">Size</label>
+            <input name="size" type="text" value="{{post.size}}" class="form-input" />
 
 
-        <button type="submit" class="btn">Update Post</button>
-        <button type="button" class="delete-post-btn btn">Delete Post</button>
-    </form>
+
+            <button type="submit" class="btn">Update Post</button>
+            <button type="button" class="delete-post-btn btn">Delete Post</button>
+        </form>
+    </div>
 </div>
-
 {{!-- add edit-post.js --}}
-<script src="/javascript/edit-post.js"></script>
+<script src="/js/edit-post.js"></script>
 
 {{!-- add delete-post.js --}}
-<script src="/javascript/delete-post.js"></script>
+<script src="/js/delete-post.js"></script>
 

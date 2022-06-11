@@ -1,16 +1,91 @@
 :root {
-    --dark-color : blue
-    
+    --dark-color : #173F2E;
+    --light-color : #13D3C3;
+    --med-color : #545479;
+    --shadow-color:#30306b;
+    --shadow-color-two:#0f5739;
+    --font-color:white;
+
+
 }
 
 * {
     text-align: center;
+    font-family: 'Merienda', cursive;
 }
+
+.comment-card {
+    background-color: var(--shadow-color-two);
+}
+.new-listing {
+    background-color:var(--dark-color)
+}
+
+.description, .size, .location {
+    color: black;
+}
+
+
+.edit-card {
+    background-color: var(--dark-color);
+}
+.container {
+    background-color: var(--dark-color);
+    color:var(--font-color);
+}
+
+
 #headermain {
-    background-color: rgb(102, 174, 233);
+    background-color: var(--light-color);
+    height: 90px;
+    border-bottom: solid 3px var(--med-color);
+}
+
+#headermaintxt {
+    padding-top: 3px;
+    font-size: 70px;
+}
+
+#login-signup {
+    color: var(--font-color);
+}
+.btn {
+    background-color: var(--med-color);
+    border-bottom: var(--shadow-color) 2px solid;
+    border-left: var(--shadow-color) 2px solid;
+}
+
+.link {
+    color: var(--font-color);
+}
+
+#login-btn {
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+    margin: 100px;
+    
+}
+
+.comment {
+    color:black;
+}
+
+#username {
+    color: black
 }
 
 .btn {
-    background-color: rgb(0, 0, 0);
-    color:rgb(58, 248, 248)
+    color: var(--light-color)
 }
+
+.card-header {
+    background-color: var(--dark-color);
+    color:var(--font-color);
+}
+
+#postinfo {
+    margin-left: 25%;
+    
+}
+

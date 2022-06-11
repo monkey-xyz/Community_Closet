@@ -2,11 +2,16 @@ const { Comment } = require('../models');
 
 const comments = [{
     id: 1,
-    body: "lorem ipsum"
+    post_id: 2,
+    user_id: 3,
+    body: "lorem ipsum",
 },
 {
     id: 2,
-    body: "lorem ipsum"
+    post_id: 3,
+    user_id : 3,
+    body: "lorem ipsum",
+    
 }]
 
 const seedComments = () => Comment.bulkCreate(comments);

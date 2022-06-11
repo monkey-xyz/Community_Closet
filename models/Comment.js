@@ -13,15 +13,37 @@ Comment.init(
         },
         body: {
             type: DataTypes.STRING,
-            allowNull: true,
+            allowNull: false,
         },
+
+        post_id: 
+        {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: 
+            {
+                model: 'post',
+                key: 'id'
+            }
+        },
+
+        user_id: 
+        {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: 
+            {
+                model: 'user',
+                key: 'id'
+            }
+        }
     },
     {
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'Comment',
+        modelName: 'comment',
     }
 );
 

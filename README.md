@@ -8,6 +8,8 @@
 This is an MVC application built with [MySQL2](https://www.npmjs.com/package/mysql2), [Sequelize](https://www.npmjs.com/package/sequelize), [Express.js](https://www.npmjs.com/package/express), [express-session](https://www.npmjs.com/package/express-session), [express-handlebars](https://www.npmjs.com/package/express-handlebars), [bcrypt package](https://www.npmjs.com/package/bcrypt), [multer-s3](https://github.com/anacronw/multer-s3#readme), a [dotenv](https://www.npmjs.com/package/dotenv) package, and deployed with Heroku.
   
 
+  [Project Proposal](https://docs.google.com/document/d/123ta--UUTVPxiG5ZRC1CdBKswlroDOcPtE_ReHDATL0/edit)
+
 ---
 ## Table of Contents
 
@@ -25,18 +27,18 @@ This is an MVC application built with [MySQL2](https://www.npmjs.com/package/mys
  
 
 - [Community Closet Git Hub Repository](https://github.com/areitan/Community_Closet)
-- [Community Closet Deployed Link](********)
+- [Community Closet Deployed Link](https://community-closet-206.herokuapp.com/)
+- [Community Closet Presentation Slides](https://docs.google.com/presentation/d/199cV_egqvRHdBYLZsEMmN1OsVWL0Lxmc-d0fFGS4izE/edit#slide=id.p)
 
 
 ---
 ## Usage
 
-  
+
+
 
 ### Initialization
 ![Initializing the application](/assets/images/********.png)
-
-
 
 
 ---
@@ -54,16 +56,18 @@ In order to create this application, we used the skills we have at the moment. W
 
 - [multer-s3](https://github.com/anacronw/multer-s3#readme)
 - [Stack OverFlow: Uploading image to amazon s3 using multer-s3 nodejs](https://stackoverflow.com/questions/40494050/uploading-image-to-amazon-s3-using-multer-s3-nodejs)
+- [Raddy: Upload and Store Images in MySQL using Node.Js, Express, Express-FileUpload & Express-Handlebars](https://www.youtube.com/watch?v=hyJiNTFtQic)
+
 - Trilogy Education Services, LLC for example code throughout the week 14 exercises.
 
 
 ### Questions
 
 For any question, please contact us on GitHub at: 
-[Kiersten Zug](https://github.com/Kzug) or by email at <kierstenzug@gmail.com>.
-[April Reitan](https://github.com/areitan) or by email at <areitan@fredhutch.org>.
-[Tiffany Dempsey](https://github.com/Tiffany7809) or by email at <tiffany.dempsey2000@gmail.com>.
-[Mia Borja](https://github.com/pldbrja) or by email at <apk.borja@gmail.com>.
+- [Kiersten Zug](https://github.com/Kzug) or by email at <kierstenzug@gmail.com>.
+- [April Reitan](https://github.com/areitan) or by email at <areitan@fredhutch.org>.
+- [Tiffany Dempsey](https://github.com/Tiffany7809) or by email at <tiffany.dempsey2000@gmail.com>.
+- [Mia Borja](https://github.com/pldbrja) or by email at <apk.borja@gmail.com>.
 
 ---
 

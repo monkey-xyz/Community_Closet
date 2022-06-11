@@ -18,6 +18,12 @@ Post.init(
         description: {
             type: DataTypes.STRING,
         },
+        location: {
+            type: DataTypes.STRING,
+        },
+        size: {
+            type: DataTypes.STRING,
+        },
         date_created: {
             type: DataTypes.DATE,
             allowNull: false,
@@ -30,6 +36,10 @@ Post.init(
                 key: 'id',
             },
         },
+        img_url: {
+            type: DataTypes.STRING,
+
+        }
     },
     {
         sequelize,
