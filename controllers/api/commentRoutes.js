@@ -11,9 +11,17 @@ router.post('/', Auth, async (req, res) => {
             user_id: req.session.user_id,
         });
         res.status(200).json(commentData);
+        console.log(commentData);
+       
+
     } catch (err) {
         res.status(404).json(commentData);
     }
 });
 
+
+
+
 module.exports = router;
+
+
