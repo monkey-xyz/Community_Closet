@@ -16,30 +16,4 @@ router.post('/', Auth, async (req, res) => {
     }
 });
 
-
-//GET /api/comments/ route (get all comments)
-router.get('/', (req, res) => {
-    Comment.findAll({})
-        .then(commentData => res.json(commentData))
-        .catch(err => {
-            res.status(500).json(err);
-        })
-});
-
-
-//GET /api/comments/:id route (find comment by id)
-router.get('/:id', (req, res) => {
-    Comment.findAll({
-            where: {
-                id: req.params.id
-            }
-        })
-        .then(commentData => res.json(commentData))
-        .catch(err => {
-            res.status(500).json(err);
-        })
-});
-
-
-
 module.exports = router;

@@ -99,14 +99,13 @@ router.get("/profile", Auth, async (req, res) => {
     const user = userData.get({ plain: true });
 
     res.render("profile", {
-      user,
+      ...user,
       logged_in: true,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
-
 
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
