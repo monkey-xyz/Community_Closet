@@ -13,7 +13,7 @@ Comment.init(
         },
         body: {
             type: DataTypes.STRING,
-            allowNull: true,
+            allowNull: false,
         },
 
         post_id: 
