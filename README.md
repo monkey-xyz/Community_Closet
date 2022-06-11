@@ -5,7 +5,7 @@
 ---
 ## Description
 
-This is an MVC application built with [MySQL2](https://www.npmjs.com/package/mysql2), [Sequelize](https://www.npmjs.com/package/sequelize), [Express.js](https://www.npmjs.com/package/express), [express-session](https://www.npmjs.com/package/express-session), [express-handlebars](https://www.npmjs.com/package/express-handlebars), [bcrypt package](https://www.npmjs.com/package/bcrypt), [multer-s3](https://github.com/anacronw/multer-s3#readme), a [dotenv](https://www.npmjs.com/package/dotenv) package, and deployed with Heroku.
+Especially now, with the rising cost of everything, ways to share items with neighbors are valuable. We wanted to design a site where users could post clothing items they no longer needed for others in the community who might be able to use them. 
   
 
   [Project Proposal](https://docs.google.com/document/d/123ta--UUTVPxiG5ZRC1CdBKswlroDOcPtE_ReHDATL0/edit)
@@ -24,7 +24,22 @@ This is an MVC application built with [MySQL2](https://www.npmjs.com/package/mys
 ---
 ## Installation
 
- 
+ This is an MVC application built with the following technologies:
+ - [MySQL2](https://www.npmjs.com/package/mysql2)
+ - [Sequelize](https://www.npmjs.com/package/sequelize)
+ - [Express.js](https://www.npmjs.com/package/express)
+ - [express-session](https://www.npmjs.com/package/express-session)
+ - [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize)
+ - [express-handlebars](https://www.npmjs.com/package/express-handlebars)
+ - [bcrypt package](https://www.npmjs.com/package/bcrypt)
+ - [AWS SDK for JavaScript](https://www.npmjs.com/package/aws-sdk)
+ - [@aws-sdk/client-s3](https://www.npmjs.com/package/@aws-sdk/client-s3), 
+ - [multer-s3](https://github.com/anacronw/multer-s3#readme)
+ - [dotenv](https://www.npmjs.com/package/dotenv) package
+ - [Heroku](https://signup.heroku.com/)
+
+
+### Application Links
 
 - [Community Closet Git Hub Repository](https://github.com/areitan/Community_Closet)
 - [Community Closet Deployed Link](https://community-closet-206.herokuapp.com/)
@@ -34,17 +49,34 @@ This is an MVC application built with [MySQL2](https://www.npmjs.com/package/mys
 ---
 ## Usage
 
+1. Go to the deplyed application: [Community Closet Deployed Link](https://community-closet-206.herokuapp.com/)
 
 
+### Log In or Sign up
+![Log In or Sign up](/assets/images/1_landing_page.png)
 
-### Initialization
-![Initializing the application](/assets/images/********.png)
+### Sign up
+![Sign up](/assets/images/2_sign_up.png)
 
+### Log in
+![Log in](/assets/images/3_login.png)
+
+### New User Profile Page
+![New User Profile Page](/assets/images/4_logged_in.png)
+
+### Create a post
+![Create a post](/assets/images/5_create_post.png)
+
+### View new post on profile
+![View new post on profile](/assets/images/6_New_post.png)
+
+### View all posts
+![View all posts](/assets/images/8_Home_View_All_Posts.png)
 
 ---
 ## Tests
 
-
+Testing was done by manually entering data as a user would, and bytesting routes with [Insomnia](https://insomnia.rest/)
 
 --- 
 ## Contribute
@@ -54,10 +86,12 @@ In order to create this application, we used the skills we have at the moment. W
 ---
 ## Credits
 
+- [congmul/aws-s3-multer-example](https://github.com/congmul/aws-s3-multer-example)
 - [multer-s3](https://github.com/anacronw/multer-s3#readme)
 - [Stack OverFlow: Uploading image to amazon s3 using multer-s3 nodejs](https://stackoverflow.com/questions/40494050/uploading-image-to-amazon-s3-using-multer-s3-nodejs)
 - [Raddy: Upload and Store Images in MySQL using Node.Js, Express, Express-FileUpload & Express-Handlebars](https://www.youtube.com/watch?v=hyJiNTFtQic)
-
+- [ColoSpace](https://mycolor.space/)
+- [Presentation Background](https://pixabay.com/illustrations/clothes-clothing-boots-footwear-736033/)
 - Trilogy Education Services, LLC for example code throughout the week 14 exercises.
 
 
