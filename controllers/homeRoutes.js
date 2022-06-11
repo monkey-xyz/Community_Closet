@@ -47,7 +47,6 @@ router.get("/post/:id", async (req, res) => {
         },
         {
           model: Comment,
-          attributes: ["id", "body", "post_id", "user_id"],
         },
       ],
     });
