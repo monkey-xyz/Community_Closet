@@ -3,7 +3,6 @@ const seedPosts = require("./postSeed");
 const seedComments = require("./commentSeed");
 
 const sequelize = require("../config/connection");
-const seedPictures = require("./pictureSeed");
 
 //seeding the database with user data
 const seedAll = async () => {
@@ -11,7 +10,6 @@ const seedAll = async () => {
     await seedUsers();
     await seedPosts();
     await seedComments();
-    await seedPictures();
     process.exit(0);
   };
   

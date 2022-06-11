@@ -46,7 +46,7 @@
     font-size: 70px;
 }
 
-#login-signup{
+#login-signup {
     color: var(--font-color);
 }
 .btn {
@@ -65,6 +65,10 @@
     height: 50px;
     margin: 100px;
     
+}
+
+.comment {
+    color:black;
 }
 
 #username {
