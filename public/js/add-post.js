@@ -31,5 +31,5 @@ async function newFormHandler(event) {
   }
 }
 
-//listening for button click on submit
+//listener for button click on submit
 document.querySelector("#postBtn").addEventListener("click", newFormHandler);
