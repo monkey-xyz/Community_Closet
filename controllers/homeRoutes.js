@@ -108,46 +108,6 @@ router.get("/profile", Auth, async (req, res) => {
 });
 
 
-
-///////////////////////////////////////////
-
-// router.get('/profile', Auth, (req, res) => {
-//   Post.findAll({
-//           where: {
-//               user_id: req.session.user_id
-//           },
-//           attributes: [
-//               'id',
-//               'title',
-//               'description',
-//               'date_created'
-//           ],
-//           include: [{
-//                   model: Comment,
-//                   attributes: ['id', 'body', 'post_id', 'user_id'],
-//                   include: {
-//                       model: User,
-//                       attributes: ['name']
-//                   }
-//               },
-//               {
-//                   model: User,
-//                   attributes: ['name']
-//               }
-//           ]
-//       })
-//       .then(postData => {
-//           const posts = postData.map(post => post.get({ plain: true }));
-//           res.render('profile', { posts, logged_in: true });
-//       })
-//       .catch(err => {
-//           res.status(500).json(err);
-//       });
-// });
-
-
-/////////////////////////////////////////////
-
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
     res.redirect("/profile");

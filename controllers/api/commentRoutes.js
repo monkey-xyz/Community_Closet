@@ -27,6 +27,18 @@ router.get('/', (req, res) => {
 });
 
 
+//GET /api/comments/:id route (find comment by id)
+router.get('/:id', (req, res) => {
+    Comment.findAll({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(commentData => res.json(commentData))
+        .catch(err => {
+            res.status(500).json(err);
+        })
+});
 
 
 
