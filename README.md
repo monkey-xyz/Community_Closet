@@ -50,11 +50,28 @@ Especially now, with the rising cost of everything, ways to share items with nei
 ## Usage
 
 1. Go to the deplyed application: [Community Closet Deployed Link](https://community-closet-206.herokuapp.com/)
-2. 
 
-### Initialization
-![Initializing the application](/assets/images/********.png)
 
+### Log In or Sign up
+![Log In or Sign up](/assets/images/1_landing_page.png)
+
+### Sign up
+![Sign up](/assets/images/2_sign_up.png)
+
+### Log in
+![Log in](/assets/images/3_login.png)
+
+### New User Profile Page
+![New User Profile Page](/assets/images/4_logged_in.png)
+
+### Create a post
+![Create a post](/assets/images/5_create_post.png)
+
+### View new post on profile
+![View new post on profile](/assets/images/6_New_post.png)
+
+### View all posts
+![View all posts](/assets/images/8_Home_View_All_Posts.png)
 
 ---
 ## Tests
