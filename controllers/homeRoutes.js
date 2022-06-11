@@ -110,7 +110,7 @@ router.get("/profile", Auth, async (req, res) => {
 
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
-    res.redirect("/profile");
+    res.redirect("/homepage");
     return;
   }
   res.render("login");

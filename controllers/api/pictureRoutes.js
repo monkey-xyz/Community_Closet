@@ -17,6 +17,7 @@ router.post("/upload", Auth, upload.single("upl"), async function (req, res, nex
     location: req.body["location"],
     user_id: req.session.user_id,
   });
+  
   res.redirect("/profile");
   console.log(req.file.location);
   console.log(req.body);
