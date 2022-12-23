@@ -21,15 +21,17 @@
 /* Navbar-related styling */
 .navbar {
   height: 6vh !important;
+  padding: .75rem 0;
 }
 
 .navbar-brand {
   font-family: 'Poppins', sans-serif;
+  position: relative;
 }
 
 .navbar-title {
   position: absolute;
-  left: 25px;
+  left: 12px;
   color: var(--title-color);
   font-weight: 600;
 }
@@ -42,6 +44,13 @@
 .sign-btn {
   text-decoration: none;
 }
+
+.list-group-item {
+  border: none !important;
+  background-color: transparent;
+}
+
+/* Profile styling */
 
 .comment-card {
   background-color: var(--shadow-color-two);
@@ -58,11 +67,6 @@
 .edit-card {
   background-color: var(--dark-color);
 }
-.container {
-  background-color: var(--dark-color);
-  color:var(--font-color);
-}
-
 
 #headermain {
   background-color: var(--light-color);
@@ -77,11 +81,6 @@
 
 #login-signup {
   color: var(--font-color);
-}
-.btn {
-  background-color: var(--med-color);
-  border-bottom: var(--shadow-color) 2px solid;
-  border-left: var(--shadow-color) 2px solid;
 }
 
 .link {
@@ -102,10 +101,6 @@
 
 #username {
   color: black
-}
-
-.btn {
-  color: var(--light-color)
 }
 
 .card-header {

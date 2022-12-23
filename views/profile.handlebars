@@ -1,18 +1,19 @@
-
-{{#if posts.length}}
-
 <div>
-<p id="greeting">Welcome back {{name}} !</p>
+  <div>
+    <p id="greeting"><i class="fa-regular fa-circle-user"></i> Welcome back {{name}} !</p>
+  </div>
+
   <h2>Your Posts</h2>
+
+  {{#if posts.length}}
   
     {{#each posts as |post|}}
 
       {{> profile-postinfo post}}
 
     {{/each}}
-
+  {{/if}}
 </div>
-{{/if}}
 
 
 

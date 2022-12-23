@@ -24,19 +24,11 @@ Especially now, with the rising cost of everything, ways to share items with nei
 ---
 ## Installation
 
- This is an MVC application built with the following technologies:
- - [MySQL2](https://www.npmjs.com/package/mysql2)
- - [Sequelize](https://www.npmjs.com/package/sequelize)
- - [Express.js](https://www.npmjs.com/package/express)
- - [express-session](https://www.npmjs.com/package/express-session)
- - [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize)
- - [express-handlebars](https://www.npmjs.com/package/express-handlebars)
- - [bcrypt package](https://www.npmjs.com/package/bcrypt)
- - [AWS SDK for JavaScript](https://www.npmjs.com/package/aws-sdk)
- - [@aws-sdk/client-s3](https://www.npmjs.com/package/@aws-sdk/client-s3), 
- - [multer-s3](https://github.com/anacronw/multer-s3#readme)
- - [dotenv](https://www.npmjs.com/package/dotenv) package
- - [Heroku](https://signup.heroku.com/)
+  `npm i`
+
+  `npm run seed`
+
+  `npm start`
 
 
 ### Application Links
