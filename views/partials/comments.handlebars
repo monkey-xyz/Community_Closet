@@ -1,23 +1,19 @@
-
 <div class="comments">
   {{#each this}}
     <div class="card">
-        <h5 class="card-header">Comment:</h5>
+      <h5 class="card-header">Comment:</h5>
 
-        <div class="comment card-body">
-          
-            <div class="comment">
-                {{body}}
-            </div>
-            
-            <div>
-               
-                  <p class="card-text">Posted by {{user.name}} on {{format_date date_created}} </p>
-
-            </div>
-            
+      <div class="comment card-body">
+        <div class="comment">
+            {{body}}
         </div>
         
+        <div>
+          <p class="card-text">Posted by {{user.name}} on {{format_date date_created}} </p>
+        </div>
+          
+      </div>
+      
     </div>
   {{/each}}
 </div>

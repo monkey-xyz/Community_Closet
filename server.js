@@ -37,7 +37,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(routes);
 
 app.get("/", (req, res) => {
-  res.render("homepage");
+  res.render("landing");
 });
 
 sequelize.sync({ force: false }).then(() => {

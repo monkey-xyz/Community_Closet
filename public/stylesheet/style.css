@@ -1,91 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap');
+
 :root {
-    --dark-color : #173F2E;
-    --light-color : #13D3C3;
-    --med-color : #545479;
-    --shadow-color:#30306b;
-    --shadow-color-two:#0f5739;
-    --font-color:white;
-
-
+  --dark-color: #173F2E;
+  --light-color: #13D3C3;
+  --med-color: #545479;
+  --shadow-color:#30306b;
+  --shadow-color-two:#0f5739;
+  --font-color:#0D0D0D;
+  --accent-color: #ABA361;
+  --accent-two-color: #ABA361;
+  --title-color: #525543;
 }
 
 * {
-    text-align: center;
-    font-family: 'Merienda', cursive;
+  margin: 0 !important;
+  text-align: center;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+/* Navbar-related styling */
+.navbar {
+  height: 6vh !important;
+}
+
+.navbar-brand {
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-title {
+  position: absolute;
+  left: 25px;
+  color: var(--title-color);
+  font-weight: 600;
+}
+
+.behind {
+  z-index: -2;
+  color: var(--accent-color);
+}
+
+.sign-btn {
+  text-decoration: none;
 }
 
 .comment-card {
-    background-color: var(--shadow-color-two);
+  background-color: var(--shadow-color-two);
 }
 .new-listing {
-    background-color:var(--dark-color)
+  background-color:var(--dark-color)
 }
 
 .description, .size, .location {
-    color: black;
+  color: black;
 }
 
 
 .edit-card {
-    background-color: var(--dark-color);
+  background-color: var(--dark-color);
 }
 .container {
-    background-color: var(--dark-color);
-    color:var(--font-color);
+  background-color: var(--dark-color);
+  color:var(--font-color);
 }
 
 
 #headermain {
-    background-color: var(--light-color);
-    height: 90px;
-    border-bottom: solid 3px var(--med-color);
+  background-color: var(--light-color);
+  height: 90px;
+  border-bottom: solid 3px var(--med-color);
 }
 
 #headermaintxt {
-    padding-top: 3px;
-    font-size: 70px;
+  padding-top: 3px;
+  font-size: 70px;
 }
 
 #login-signup {
-    color: var(--font-color);
+  color: var(--font-color);
 }
 .btn {
-    background-color: var(--med-color);
-    border-bottom: var(--shadow-color) 2px solid;
-    border-left: var(--shadow-color) 2px solid;
+  background-color: var(--med-color);
+  border-bottom: var(--shadow-color) 2px solid;
+  border-left: var(--shadow-color) 2px solid;
 }
 
 .link {
-    color: var(--font-color);
+  color: var(--font-color);
 }
 
 #login-btn {
-    font-size: 20px;
-    width: 200px;
-    height: 50px;
-    margin: 100px;
-    
+  font-size: 20px;
+  width: 200px;
+  height: 50px;
+  margin: 100px;
+  
 }
 
 .comment {
-    color:black;
+  color:black;
 }
 
 #username {
-    color: black
+  color: black
 }
 
 .btn {
-    color: var(--light-color)
+  color: var(--light-color)
 }
 
 .card-header {
-    background-color: var(--dark-color);
-    color:var(--font-color);
+  background-color: var(--dark-color);
+  color:var(--font-color);
 }
 
 #postinfo {
-    margin-left: 25%;
-    
+  margin-left: 25%;
+  
 }
 
