@@ -1,22 +1,48 @@
-<div>
-  <div>
-    <p id="greeting"><i class="fa-regular fa-circle-user"></i> Welcome back {{name}} !</p>
+<div class="container my-5">
+  <div class="row">
+    <div class="col">
+      <p class="fs-1" id="greeting"><i class="fa-regular fa-circle-user text-muted fa-custom"></i> Welcome back <span class="user-name">{{name}}</span>!</p>
+    </div>
+    
+    <div class="col">
+      <h3 class="bg-mg border-bottom">Your Information</h3>
+      <div>
+        <p>Name: {{name}} <i class="fa-solid fa-pen-to-square"></i></p>
+        <p>Age: {{age}} <i class="fa-solid fa-pen-to-square"></i></p>
+        <p>Location: {{location}} <i class="fa-solid fa-pen-to-square"></i></p>
+
+        <div class="my-3">
+          <h5><i class="fa-solid fa-gear"></i> Secret Settings</h5>
+          <p>Email: {{email}}<i class="fa-solid fa-pen-to-square"></i></p>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <h2>Your Posts</h2>
+  <div class="row">
+    <div class="col">
+      <h3>Saved Listings</h3>
+    </div>
 
-  {{#if posts.length}}
-  
-    {{#each posts as |post|}}
+    <div class="col">
+      <div class="d-flex flex-row justify-content-between">
+        <h3>Your Listings</h3>
 
-      {{> profile-postinfo post}}
+        <a class="link" href="/new-post"><i class="fa-solid fa-plus text-muted add-post rounded-circle"></i></a>
+      </div>
 
-    {{/each}}
-  {{/if}}
+      {{#if posts.length}}
+    
+        {{#each posts as |post|}}
+
+          {{> profile-postinfo post}}
+
+        {{/each}}
+        {{else}}
+        <p class="text-muted">No posts yet, let's get selling!</p>
+      {{/if}}
+    </div>
+  </div>
 </div>
-
-
-
-<button class="btn btn-primary" type="button"><a class="link" href="/new-post">Create A New Post!</a></button>
 
 <script src="/js/add-post.js"></script>

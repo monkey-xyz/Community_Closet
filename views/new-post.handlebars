@@ -1,41 +1,55 @@
-  <div class="card new-listing">
-      <h3 class="card-header">Add a new listing</h3>
+<div class="card my-5 mx-auto new-listing" style="width: 60rem">
+  <h3 class="card-header">Create a New Listing</h3>
 
-      <form action="/api/pictures/upload"
-        method="post"
-        enctype="multipart/form-data" class="card-body new-post-form" id="new-post-form">
+  <div class="card-body">
+    <form action="/api/pictures/upload"
+      method="post"
+      enctype="multipart/form-data" class="new-post-form" id="new-post-form">
 
-
-        {{!-- <form class="card-body new-post-form" id="new-post-form"></form> --}}
+      <div class="row mb-3">
+        <div class="col-md-9">
           <label for="post-title" class="form-label">Title</label>
-          <input type="text" id="post-title" name="post-title" class="form-input" />
+          <input type="text" id="post-title" name="post-title" class="form-input form-control" />
+        </div>
 
-          <label class="form-label" for="content">Description</label>
-          <input id="content" name="description" class="form-input" />
-
-          <label class="form-label" for="content">Location</label>
-          <input id="content" name="location" class="form-input" />
-
+        <div class="col-md-3">
           <label class="form-label" for="content">Size</label>
-          <input id="content" name="size" class="form-input" />
+          <input id="content" name="size" class="form-input form-control" />
+        </div>
+      </div>
 
-      
+      <div class="row mb-3">
+        <div class="col">
+          <label class="form-label" for="content">Location</label>
+          <input id="content" name="location" class="form-input form-control" placeholder="XXXX St, Seattle" />
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <label class="form-label" for="content">Description</label>
+          <textarea id="content" name="description" class="form-input form-control" rows="3"></textarea>
+        </div>
+      </div>
 {{!-- adding a picture --}}
-  <div class="form-wrapper">
-      <div id="clothingpiece"></div>
-        <input
-          id="img-input-form"
-          type="file"
-          name="upl"
-          accept=".png, .jpg"
-        />
-        <input type="submit" value="Create Post"  class="btn" />
-    </div>
-          {{!-- <button  id="postBtn" class="btn">Create Post</button> --}}
-      </form>
-  </div>
+      <div class="row mb-3">
+        <div class="form-wrapper col-md-6">
+            <input
+              id="img-input-form"
+              type="file"
+              name="upl"
+              class="form-control"
+              accept=".png, .jpg"
+            />
+        </div>
 
-{{!-- add add-post.js --}}
+        <div id="clothingpiece" class="col-md-6 position-relative border"></div>
+      </div>
+      <input type="submit" value="Create Post"  class="btn" />
+        {{!-- <button  id="postBtn" class="btn">Create Post</button> --}}
+    </form>
+  </div>
+</div>
 
 <script src="/js/index.js"></script>
 <script src="/js/add-post.js"></script>

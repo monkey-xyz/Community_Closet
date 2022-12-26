@@ -8,13 +8,15 @@
   --shadow-color-two:#0f5739;
   --font-color:#0D0D0D;
   --accent-color: #ABA361;
-  --accent-two-color: #ABA361;
+  --accent-lr-color: #732C2C;
+  --accent-lg-color: #EFF7CF;
+  --accent-mg-color: #BAD9B5;
+  --accent-dg-color: #420C14;
   --title-color: #525543;
 }
 
 * {
   margin: 0 !important;
-  text-align: center;
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
@@ -52,11 +54,44 @@
 
 /* Profile styling */
 
+.fa-custom {
+  font-size: 6vh;
+}
+
+.user-name {
+  color: var(--accent-lr-color);
+}
+
+/* General styling */
+
+.bg-lg {
+  background: var(--accent-lg-color);
+}
+
+.bg-mg {
+  background: var(--accent-mg-color);
+}
+
+.add-post {
+  padding: 3px 4px;
+  transition: all .5s;
+}
+
+.add-post:hover {
+  background-color: rgb(211, 211, 211);
+  transition: all .5s;
+}
+
+.card {
+  border: none;
+}
+
+.card > * {
+  border: none;
+}
+
 .comment-card {
   background-color: var(--shadow-color-two);
-}
-.new-listing {
-  background-color:var(--dark-color)
 }
 
 .description, .size, .location {
@@ -101,11 +136,6 @@
 
 #username {
   color: black
-}
-
-.card-header {
-  background-color: var(--dark-color);
-  color:var(--font-color);
 }
 
 #postinfo {
