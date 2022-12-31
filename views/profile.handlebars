@@ -7,13 +7,61 @@
     <div class="col">
       <h3 class="bg-mg border-bottom">Your Information</h3>
       <div>
-        <p>Name: {{name}} <i class="fa-solid fa-pen-to-square"></i></p>
-        <p>Age: {{age}} <i class="fa-solid fa-pen-to-square"></i></p>
-        <p>Location: {{location}} <i class="fa-solid fa-pen-to-square"></i></p>
+        {{!-- Create and add queries to update name and add location. Latter is not required, but recommended. Add query to update email, eventually doing one for password as well. Update email to require real one. --}}
+
+        <div class="my-3">
+          <div class="row g-1">
+            <div class="col-auto">
+              <label class="col-form-label" for="nameEdit">Name:</label>
+            </div>
+
+            <div class="col-auto">
+              <input type="text" class="form-control" id="nameEdit" value={{name}} />
+            </div>
+
+            <div class="col-auto">
+              <button type="submit">
+                <i class="fa-solid fa-pen-to-square col-form-label"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="my-3">
+          <div class="row g-1">
+            <div class="col-auto">
+              <label class="col-form-label" for="emailEdit">Location:</label>
+            </div>
+
+            <div class="col-auto">
+              <input type="text" class="form-control" id="emailEdit" value={{location}} />
+            </div>
+
+            <div class="col-auto">
+              <button type="submit">
+                <i class="fa-solid fa-pen-to-square col-form-label"></i>
+              </button>
+            </div>
+          </div>
+        </div>
 
         <div class="my-3">
           <h5><i class="fa-solid fa-gear"></i> Secret Settings</h5>
-          <p>Email: {{email}}<i class="fa-solid fa-pen-to-square"></i></p>
+          <form class="row g-1">
+            <div class="col-auto">
+              <label class="col-form-label" for="emailEdit">Email:</label>
+            </div>
+
+            <div class="col-auto">
+              <input required type="text" class="form-control" id="emailEdit" value={{email}} />
+            </div>
+
+            <div class="col-auto">
+              <button type="submit">
+                <i class="fa-solid fa-pen-to-square col-form-label"></i>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -22,6 +70,8 @@
   <div class="row">
     <div class="col">
       <h3>Saved Listings</h3>
+
+      {{!-- Create method to save post ids to an array and render them in this space. --}}
     </div>
 
     <div class="col">
@@ -38,7 +88,8 @@
           {{> profile-postinfo post}}
 
         {{/each}}
-        {{else}}
+
+      {{else}}
         <p class="text-muted">No posts yet, let's get selling!</p>
       {{/if}}
     </div>

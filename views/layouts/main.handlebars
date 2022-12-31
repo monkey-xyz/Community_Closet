@@ -17,7 +17,7 @@
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="/"><i class="fa-solid fa-door-closed fs-2 behind"></i> <span class="fs-4 navbar-title">Community Closet</span></a>
-      <!-- Conditionally render login or logout links -->
+      {{!-- Conditionally render login or logout links --}}
       <div class="navbar-nav">
         {{#if logged_in}}
         <ul class="list-group list-group-horizontal">
@@ -25,7 +25,7 @@
             <li class="list-group-item"> 
               <div class="dropdown-center">
                 <a class="link dropdown-toggle" role="button" data-bs-toggle="dropdown"><i class="fa-solid fa-user"></i> Hello, {{name}}</a>
-
+                {{!-- Fix error with rendering being unable to detect the user as logged in at landing page. Fix issue with name not showing up on timeline. --}}
                 <ul class="dropdown-menu dropdown-menu-lg-end">
                   <li><a class="dropdown-item" href="/profile">Profile</a></li>
                   <li><a class="dropdown-item" href="/" id="logout">Log out</a></li>
@@ -40,7 +40,7 @@
     </div>
   </nav>
 
-  <main class="container container-fluid">
+  <main class="container-xxl mx-auto">
     <!-- Render the sub layout -->
     {{{ body }}}
   </main>

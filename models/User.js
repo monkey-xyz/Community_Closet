@@ -24,9 +24,7 @@ User.init(
             type: DataTypes.STRING,
             allowNull: false,
             unique: true,
-            validate: {
-                isEmail: true,
-            },
+            match: [/.+@.+\..+/, "Must use a valid email address"],
         },
         password: {
             type: DataTypes.STRING,
@@ -34,10 +32,6 @@ User.init(
             validate: {
                 len: [8],
             },
-        },
-        age: {
-          type: DataTypes.INTEGER,
-          allowNull: true,
         },
         location: {
           type: DataTypes.STRING,
