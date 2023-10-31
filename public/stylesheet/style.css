@@ -50,6 +50,7 @@
 .list-group-item {
   border: none !important;
   background-color: transparent;
+  list-style-type: none;
 }
 
 /* Profile styling */

@@ -24,12 +24,25 @@ router.get("/homepage", Auth, async (req, res) => {
       ],
     });
 
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ["password"] },
+    });
+
     const posts = postData.map((posts) => posts.get({ plain: true }));
 
-    res.render("homepage", {
-      posts,
-      logged_in: req.session.logged_in,
-    });
+    const user = userData.get({ plain: true });
+
+    if (req.session.logged_in) {
+      res.render("homepage", {
+        posts,
+        ...user,
+        logged_in: req.session.logged_in
+      });
+    } else {
+      res.render("homepage", {
+        posts,
+      });
+    }
   } catch (err) {
     res.status(500).json(err);
   }
@@ -60,11 +73,17 @@ router.get("/post/:id", async (req, res) => {
       ],
     });
 
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ["password"] },
+    });
+
     const post = postData.get({ plain: true });
-    console.log(post);
+    
+    const user = userData.get({ plain: true });
 
     res.render("single-post", {
       post,
+      ...user,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
