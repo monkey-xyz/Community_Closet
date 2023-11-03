@@ -92,12 +92,13 @@
 }
 
 .comment-card {
-  background-color: var(--shadow-color-two);
+  background-color: var(--accent-mg-color);
 }
 
 .description, .size, .location {
   color: black;
 }
+
 
 
 .edit-card {
